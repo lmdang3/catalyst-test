@@ -12,7 +12,7 @@
   "license": "MIT",
   "version": "0.1.0",
   "private": true,
-  "packageManager": "pnpm@10.12.4+sha512.5ea8b0deed94ed68691c9bad4c955492705c5eeb8a87ef86bc62c74a26b037b08ff9570f108b2e4dbd1dd1a9186fea925e527f141c648e85af45631074680184",
+  "packageManager": "pnpm@10.33.2+sha512.a90faf6feeab71ad6c6e57f94e0fe1a12f5dcc22cd754db40ae9593eb6a3e0b6b12e3540218bb37ae083404b1f2ce6db2a4121e979829b4aff94b99f49da1cf8",
   "scripts": {
     "dev": "dotenv -e .env.local -- turbo run dev",
     "build": "dotenv -e .env.local -- turbo run build",
@@ -26,10 +26,16 @@
     "@changesets/cli": "^2.29.4",
     "@types/node": "^22.15.30",
     "dotenv-cli": "^8.0.0",
+    "msw": "^2.9.0",
     "prettier": "^3.6.2",
     "prettier-plugin-tailwindcss": "^0.6.12",
     "turbo": "^2.5.4",
     "typescript": "^5.8.3",
     "unlighthouse": "^0.16.3"
+  },
+  "msw": {
+    "workerDirectory": [
+      "public"
+    ]
   }
 }
