@@ -1,5 +1,21 @@
 # Changelog
 
+## 1.7.0
+
+### Minor Changes
+
+- [#2989](https://github.com/bigcommerce/catalyst/pull/2989) [`518d20a`](https://github.com/bigcommerce/catalyst/commit/518d20a8a8d59bfb45384acee72e04f5366daca8) Thanks [@jorgemoya](https://github.com/jorgemoya)! - Restore locale-aware `lang` attribute on the root `<html>` tag. The previous root layout hardcoded `lang="en"` for all locales; ownership of `<html>`/`<body>` now lives in `app/[locale]/layout.tsx` so `lang={locale}` reflects the active locale. The root `app/layout.tsx` is now a passthrough, and `app/not-found.tsx` is self-sufficient (renders its own `<html>`/`<body>`) to preserve the branded 404 for non-localized requests.
+
+### Patch Changes
+
+- [#2976](https://github.com/bigcommerce/catalyst/pull/2976) [`a85fa42`](https://github.com/bigcommerce/catalyst/commit/a85fa42aaa89ae6c2ac5e69b43d4c0bf15dacdf9) Thanks [@jorgemoya](https://github.com/jorgemoya)! - Add X-Correlation-ID header to all GraphQL requests. Each page render gets a stable UUID that persists across all fetches within the same render, enabling easier request tracing in server logs.
+
+- [#2963](https://github.com/bigcommerce/catalyst/pull/2963) [`a8dd99e`](https://github.com/bigcommerce/catalyst/commit/a8dd99ef9a1aeab3341e14d39137085cd67f1673) Thanks [@chanceaclark](https://github.com/chanceaclark)! - Fix DynamicForm not rendering hidden field types, which caused `pageEntityId` to be `NaN` on contact form submission.
+
+- [#2959](https://github.com/bigcommerce/catalyst/pull/2959) [`4870221`](https://github.com/bigcommerce/catalyst/commit/4870221c3a5c5209b58fb6ec969b30897d08eea8) Thanks [@bc-svc-local](https://github.com/bc-svc-local)! - Update translations.
+
+- [#2987](https://github.com/bigcommerce/catalyst/pull/2987) [`e18feb6`](https://github.com/bigcommerce/catalyst/commit/e18feb6dd4a02526e239ff0cf7e839882fc50814) Thanks [@bc-svc-local](https://github.com/bc-svc-local)! - Update translations.
+
 ## 1.6.2
 
 ### Patch Changes
